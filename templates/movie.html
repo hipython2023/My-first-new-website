@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>欢迎来到学而思编程</title>
+</head>
+<body>
+    <h1>热门视频链接</h1>
+    
+    {% for i in movie_list %}
+        <a href={{i[0]}}>{{i[1]}}</a>
+        <br>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实时音乐</title>
+    <link rel="stylesheet" href="https://static0.xesimg.com/talcode/bootstrap4.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/music.css">
+</head>
+    <body>
+        <div class="musicbg">
+            <img src="/static/images/pic5.gif">
+        </div>
+        
+        <table class="table content">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="col">标题</th>
+                    <th scope="col">播放器</th>
+                    <th scope="col">设置</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in music_list %}
+                    <tr>
+                        <td><p>{{i[0]}}</p></td>
+                        <td><audio src="{{i[1]}}" controls="controls"></audio></td>
+                        <td><a href="/set_music?music={{i[1]}}" class="btn btn-info">设置</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>

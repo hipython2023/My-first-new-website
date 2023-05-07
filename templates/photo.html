@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的作品</title>
+    <canvas style="position: absolute;"></canvas>
+    <script src="/static/js/js1.js"></script>
+    <link rel="stylesheet" href="https://static0.xesimg.com/talcode/bootstrap4.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/photo.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <br><br><br><br><br><br><br><br>
+
+    {% for i in img_list %}
+        <img src="{{i}}">
+    {% endfor %}
+
+</body>
+</html>
